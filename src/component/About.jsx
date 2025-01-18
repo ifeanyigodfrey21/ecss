@@ -46,9 +46,11 @@ function About() {
           </h2>
         </div>
       </div>
-      <button className="flex items-center px-6 py-3 bg-white text-gray-800 border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100">
-        See More <i className="fas fa-arrow-right ml-2"></i>
-      </button>
+      <div className="text-center">
+        <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors">
+          See More
+        </button>
+      </div>
     </div>
   );
 }

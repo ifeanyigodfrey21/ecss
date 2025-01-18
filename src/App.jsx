@@ -7,6 +7,7 @@ import Dashboardage from "./pages/Dashboardage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import PaymentPage from "./pages/PaymentPage";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
@@ -16,9 +17,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/Testimonial" element={<TestimonialPage />} />
+          <Route path="/testimonials" element={<TestimonialPage />} />
           <Route path="/dashboard" element={<Dashboardage />} />
           <Route path="/payment" element={<PaymentPage />} />
+          <Route path="/product" element={<ProductPage />} />
+
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signUp" element={<SignUpPage />} />
           <Route
