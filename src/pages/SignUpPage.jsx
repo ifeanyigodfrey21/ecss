@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaGoogle, FaFacebookF, FaEye, FaEyeSlash } from "react-icons/fa";
 import logo from "../assets/AboutPage/Logo.png";
 import a1 from "../assets/AboutPage/a1.png";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -76,9 +77,12 @@ const SignUpPage = () => {
               </p>
             </div>
 
-            <button className="w-full bg-blue-900 text-white py-2.5 rounded-lg hover:bg-blue-800 transition-colors font-medium">
-              <a href="/login">Sign Up</a>
-            </button>
+            <Link
+              to="/login"
+              className="w-full bg-slate-400 text-black py-2.5 rounded-lg hover:bg-yellow-300 transition-colors font-medium flex items-center justify-center"
+            >
+              Sign Up
+            </Link>
 
             <button className="w-full bg-yellow-400 text-black py-2.5 rounded-lg hover:bg-yellow-300 transition-colors font-medium flex items-center justify-center">
               <FaGoogle className="mr-2" /> Sign Up with Google
@@ -91,12 +95,12 @@ const SignUpPage = () => {
 
           <p className="text-center text-gray-500 mt-6">
             Already have an account?{" "}
-            <a
-              href="/login"
+            <Link
+              to="/login"
               className="text-blue-500 hover:text-blue-600 font-medium"
             >
               Log in
-            </a>
+            </Link>
           </p>
         </div>
       </div>

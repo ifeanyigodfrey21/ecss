@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaGoogle, FaFacebookF, FaEye, FaEyeSlash } from "react-icons/fa";
 import logo from "../assets/AboutPage/Logo.png";
 import a1 from "../assets/AboutPage/a1.png";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -81,9 +82,12 @@ const LoginPage = () => {
               </a>
             </div>
 
-            <button className="w-full bg-indigo-900 text-white py-2.5 rounded-lg hover:bg-indigo-800 transition-colors font-medium text-lg">
-              <a href="/dashboard">Log in</a>
-            </button>
+            <Link
+              to="/dashboard"
+              className="w-full bg-slate-500 text-black py-2.5 rounded-lg hover:bg-slate-400 transition-colors font-medium text-lg flex items-center justify-center"
+            >
+              Log in
+            </Link>
 
             <div className="relative py-3">
               <div className="absolute inset-0 flex items-center">
@@ -108,12 +112,12 @@ const LoginPage = () => {
           <div className="text-center mt-6">
             <p className="text-gray-600">
               Don't have an account?{" "}
-              <a
-                href="/signUp"
+              <Link
+                to="/signUp"
                 className="text-indigo-600 hover:text-indigo-700 font-medium"
               >
                 Sign Up
-              </a>
+              </Link>
             </p>
           </div>
         </div>

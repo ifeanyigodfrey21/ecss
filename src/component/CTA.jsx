@@ -3,6 +3,7 @@ import H9 from "../assets/Hompage/h9.png";
 import H10 from "../assets/Hompage/h10.png";
 import H11 from "../assets/Hompage/h11.png";
 import { Star, StarHalf, Clock, Users, Award } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 const TestimonialCard = ({ image, name, text, rating }) => (
   <div className="w-full max-w-sm bg-white rounded-lg shadow-md transition-all hover:shadow-lg p-6">
@@ -60,9 +61,12 @@ function CTA() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-2xl">
               Ready to Achieve More? Explore Our Time Management Tips!
             </h1>
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold text-lg px-8 py-3 rounded-lg transition-colors">
+            <Link
+              to="/signUp"
+              className="bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold text-lg px-8 py-3 rounded-lg transition-colors"
+            >
               Register now
-            </button>
+            </Link>
             <p className="text-indigo-200">
               Register now to unlock premium features
             </p>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import H1 from "../assets/Hompage/h1.png";
 import logo from "../assets/AboutPage/Logo.png";
+import { Link, useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,9 +55,12 @@ const Hero = () => {
             </div>
 
             {/* Desktop Register Button */}
-            <button className="hidden md:block bg-yellow-500 text-black px-6 py-2 rounded hover:bg-yellow-400 transition-colors">
+            <Link
+              to="/signup"
+              className="hidden md:block bg-yellow-500 text-black px-6 py-2 rounded hover:bg-yellow-400 transition-colors"
+            >
               Register now
-            </button>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button
@@ -99,9 +103,12 @@ const Hero = () => {
                 >
                   Testimonials
                 </a>
-                <button className="w-full bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400 transition-colors">
-                  <a href="/signUp">Register</a>
-                </button>
+                <Link
+                  to="/signUp"
+                  className="w-full bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400 transition-colors"
+                >
+                  Register
+                </Link>
               </div>
             </div>
           )}
@@ -122,9 +129,12 @@ const Hero = () => {
           The handy doodles on, announced by some over people everywhere best
           five.
         </p>
-        <button className="bg-yellow-500 text-black px-8 py-3 rounded hover:bg-yellow-400 transition-colors font-medium">
-          <a href="/login">Log in</a>
-        </button>
+        <Link
+          to="/login"
+          className="bg-yellow-500 text-black px-8 py-3 rounded hover:bg-yellow-400 transition-colors font-medium"
+        >
+          Log in
+        </Link>
       </div>
     </div>
   );
