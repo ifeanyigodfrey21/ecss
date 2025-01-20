@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import H1 from "../assets/Hompage/h1.png";
 import logo from "../assets/AboutPage/Logo.png";
+import "animate.css";
 import { Link, useNavigate } from "react-router-dom";
 
 const Hero = () => {
@@ -28,30 +29,30 @@ const Hero = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="text-white hover:text-yellow-500 transition-colors"
               >
                 Home
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/login"
                 className="text-white hover:text-yellow-500 transition-colors"
               >
-                Courses
-              </a>
-              <a
-                href="/about"
+                Course
+              </Link>
+              <Link
+                to="/about"
                 className="text-white hover:text-yellow-500 transition-colors"
               >
                 About
-              </a>
-              <a
-                href="/testimonials"
+              </Link>
+              <Link
+                to="/testimonials"
                 className="text-white hover:text-yellow-500 transition-colors"
               >
                 Testimonials
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Register Button */}
@@ -79,30 +80,30 @@ const Hero = () => {
           {isMenuOpen && (
             <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg">
               <div className="px-4 py-3 space-y-3">
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="block text-gray-900 hover:text-yellow-500 transition-colors"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/login"
                   className="block text-gray-900 hover:text-yellow-500 transition-colors"
                 >
                   Courses
-                </a>
-                <a
-                  href="/about"
+                </Link>
+                <Link
+                  to="/about"
                   className="block text-gray-900 hover:text-yellow-500 transition-colors"
                 >
                   About
-                </a>
-                <a
-                  href="/testimonials"
+                </Link>
+                <Link
+                  to="/testimonials"
                   className="block text-gray-900 hover:text-yellow-500 transition-colors"
                 >
                   Testimonials
-                </a>
+                </Link>
                 <Link
                   to="/signUp"
                   className="w-full bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400 transition-colors"
@@ -119,7 +120,7 @@ const Hero = () => {
       <div className="relative flex flex-col items-center justify-center h-full text-center text-white px-4">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
           Balance Work and{" "}
-          <span className="text-yellow-500 bg-white/90 backdrop-blur-sm rounded-md px-2 inline-block my-2">
+          <span className="text-yellow-500 bg-white/90 backdrop-blur-sm animate__animated animate__rotateIn rounded-md px-2 inline-block my-2">
             Achieve Goals
           </span>{" "}
           <br className="hidden sm:block" />

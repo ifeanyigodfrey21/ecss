@@ -18,7 +18,7 @@ function Footer() {
   return (
     <div className="w-full">
       {/* Newsletter Section */}
-      <div className="bg-yellow-400 py-12 px-4">
+      <div className="bg-yellow-400 py-12 px-4 slide-left">
         <div className="max-w-xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-indigo-900 mb-2">
             Reach Us Directly

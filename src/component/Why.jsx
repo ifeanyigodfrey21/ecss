@@ -16,7 +16,7 @@ function Why() {
 
   return (
     <section className="py-16 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto slide-right">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
           Unlock Your Potential with Our Coaching
         </h2>

@@ -48,9 +48,9 @@ function CTA() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 ">
       {/* Hero Section */}
-      <div className="bg-indigo-900 text-white w-full py-12 px-4 md:py-16">
+      <div className="bg-indigo-900 text-white w-full py-12 px-4 md:py-16 slide-left">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center text-center space-y-6">
             <div className="flex items-center gap-2 text-yellow-400 mb-2">
@@ -75,7 +75,7 @@ function CTA() {
       </div>
 
       {/* Testimonials Section */}
-      <div className="max-w-6xl mx-auto px-4 py-16">
+      <div className="max-w-6xl mx-auto px-4 py-16 slide-right">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           What Our Clients Say
         </h2>

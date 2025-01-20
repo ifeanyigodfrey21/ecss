@@ -6,7 +6,7 @@ import Footer from "../component/Footer";
 function AboutPage() {
   return (
     <>
-      <div className="min-h-screen flex flex-col min-w-screen">
+      <div className="min-h-screen flex flex-col ">
         <header className="flex justify-between items-center p-6 bg-white shadow-md">
           <div className="flex items-center space-x-2">
             <i className="fas fa-book text-2xl text-blue-600"></i>
