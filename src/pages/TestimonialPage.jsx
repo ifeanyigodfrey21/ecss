@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../component/Footer";
+import logo from "../assets/AboutPage/Logo.png";
 
 function TestimonialPage() {
   const testimonials = [
@@ -48,12 +49,7 @@ function TestimonialPage() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <img
-                src="/api/placeholder/40/40"
-                alt="ECSS logo"
-                className="w-10 h-10 rounded"
-              />
-              <span className="text-xl font-bold text-blue-900">ECSS</span>
+              <img src={logo} alt="ECSS logo" className="w-18 h-10 rounded" />{" "}
             </div>
 
             {/* Desktop Navigation */}

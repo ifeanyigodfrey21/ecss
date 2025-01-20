@@ -22,7 +22,7 @@ const SignUpPage = () => {
         {/* Form section */}
         <div className="w-full md:w-1/2 p-6 md:p-8">
           <div className="text-center mb-8">
-            <img src={logo} alt="Logo" className="mx-auto mb-4 w-14 h-12" />
+            <img src={logo} alt="Logo" className="mx-auto mb-4 w-18 h-12" />
             <p className="text-gray-500 font-inter">Get Started!</p>
             <p className="text-gray-500 font-inter">
               Please enter your details

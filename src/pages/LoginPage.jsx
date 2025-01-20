@@ -23,7 +23,7 @@ const LoginPage = () => {
         {/* Form section */}
         <div className="w-full md:w-1/2 p-6 md:p-8">
           <div className="text-center mb-8">
-            <img src={logo} alt="Logo" className="mx-auto mb-4 w-14 h-12" />
+            <img src={logo} alt="Logo" className="mx-auto mb-4 w-18 h-12" />
             <p className="text-gray-600 text-lg font-medium">Welcome back!</p>
             <p className="text-gray-600">Please enter your details</p>
           </div>
