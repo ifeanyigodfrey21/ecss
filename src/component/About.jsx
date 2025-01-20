@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 function About() {
   return (
     <div className="flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4 slide-left">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4 ">
         Personalized coaching to help you achieve your work-life balance
       </h1>
       <p className="text-center text-gray-600 mb-8 slide-right max-w-2xl">
@@ -17,7 +17,7 @@ function About() {
         performance, master time management and find clarity in your goals.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8 slide-left">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center slide-left">
           <img
             src={H2}
             alt="Person in a suit standing in a library"
@@ -27,7 +27,7 @@ function About() {
             21-Day Peak Productivity Challenge
           </h2>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center slide-left">
           <img
             src={H3}
             alt="Group of people in a meeting"
@@ -37,7 +37,7 @@ function About() {
             Peak Performance Mastery Course
           </h2>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center slide-left">
           <img
             src={H4}
             alt="Speaker on stage in front of an audience"
