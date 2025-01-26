@@ -8,11 +8,12 @@ import {
   Twitter,
   Send,
 } from "lucide-react";
+import Button from "./Button";
 
 function Footer() {
   const navLinks = {
-    Company: ["About Us", "Why Us", "Programs", "Contact"],
-    Solutions: ["Courses", "Workshop", "Coaching"],
+    Company: ["About", "Testimonials", "Payment"],
+    Solutions: ["Product", "Login", "Home"],
   };
 
   return (
@@ -35,10 +36,7 @@ function Footer() {
                 className="w-full pl-10 pr-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-900 transition-all"
               />
             </div>
-            <button className="bg-indigo-900 text-white px-6 py-3 rounded-lg hover:bg-indigo-800 transition-colors flex items-center gap-2">
-              Subscribe
-              <Send className="w-4 h-4" />
-            </button>
+            <Button link="#" text="Subscribe" />
           </div>
         </div>
       </div>
@@ -70,7 +68,7 @@ function Footer() {
                   {links.map((link) => (
                     <li key={link}>
                       <a
-                        href="#"
+                        href={`/${link.toLowerCase(title)}`}
                         className="text-gray-400 hover:text-yellow-400 transition-colors"
                       >
                         {link}

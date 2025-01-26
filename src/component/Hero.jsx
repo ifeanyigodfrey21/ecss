@@ -4,6 +4,8 @@ import H1 from "../assets/Hompage/h1.png";
 import logo from "../assets/AboutPage/Logo.png";
 import "animate.css";
 import { Link, useNavigate } from "react-router-dom";
+import GradientText from "../UI/TextAnimations/GradientText/GradientText";
+import Button from "./Button";
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,10 +38,10 @@ const Hero = () => {
                 Home
               </Link>
               <Link
-                to="/login"
+                to="/product"
                 className="text-white hover:text-yellow-500 transition-colors"
               >
-                Course
+                Product
               </Link>
               <Link
                 to="/about"
@@ -52,6 +54,12 @@ const Hero = () => {
                 className="text-white hover:text-yellow-500 transition-colors"
               >
                 Testimonials
+              </Link>
+              <Link
+                to="/payment"
+                className="text-white hover:text-yellow-500 transition-colors"
+              >
+                Payment
               </Link>
             </div>
 
@@ -118,24 +126,32 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="relative flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
-          Balance Work and{" "}
-          <span className="text-yellow-500 bg-white/90 backdrop-blur-sm animate__animated animate__rotateIn rounded-md px-2 inline-block my-2">
-            Achieve Goals
-          </span>{" "}
-          <br className="hidden sm:block" />
-          with E-Coaching Solutions
-        </h1>
+        <GradientText
+          colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+          animationSpeed={3}
+          showBorder={true}
+          className="custom-class p-4"
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            Balance Work and{" "}
+            <span className="text-yellow-500 bg-white/90 backdrop-blur-sm animate__animated animate__rotateIn rounded-md px-2 inline-block my-2">
+              Achieve Goals
+            </span>{" "}
+            <br className="hidden sm:block" />
+            with E-Coaching Solutions
+          </h1>
+        </GradientText>
         <p className="text-base sm:text-lg md:text-xl mb-8 max-w-2xl">
           The handy doodles on, announced by some over people everywhere best
           five.
         </p>
-        <Link
+        {/* <Link
           to="/login"
           className="bg-yellow-500 text-black px-8 py-3 rounded hover:bg-yellow-400 transition-colors font-medium"
         >
           Log in
-        </Link>
+        </Link> */}
+        <Button text="Log in" link="/login" />
       </div>
     </div>
   );
