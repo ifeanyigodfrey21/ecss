@@ -13,7 +13,7 @@ import SplashCursor from "./UI/TextAnimations/SplashCursor copy";
 
 function App() {
   return (
-    <>
+    <div className="w-screen mx-auto body">
       <SplashCursor />
 
       <AuthProvider>
@@ -42,7 +42,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </AuthProvider>
-    </>
+    </div>
   );
 }
 

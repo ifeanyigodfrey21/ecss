@@ -30,15 +30,14 @@ import Navbar from "../component/Navbar";
 function ProductPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const sections = [
-    { label: "Why Us", anchor: "#why-us", icon: Trophy },
-    { label: "Courses", anchor: "#courses", icon: Star },
-    { label: "About", anchor: "#about", icon: Users },
+    { label: "Product", anchor: "#product", icon: Trophy },
+    { label: "Testimonials", anchor: "#testimonials", icon: Star },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <div className="w-full max-w-screen px-0 sm:px-6 lg:px-2">
+    <div className="w-full overflow-hidden max-w-screen px-2 sm:px-6 lg:px-2">
       <Navbar logo={logo} sections={sections} />
 
       {/* Hero Section with Improved Responsiveness */}
@@ -48,7 +47,10 @@ function ProductPage() {
         threshold={0.2}
         className="w-full bg-white py-6   sm:py-0 rounded-lg shadow-lg flex flex-col md:flex-row items-center justify-center gap-8"
       >
-        <div className="flex-col md:flex  md:px-2 md md:flex-row-reverse md:justify-between pt-20">
+        <div
+          className="flex-col md:flex  md:px-2 md md:flex-row-reverse md:justify-between pt-20"
+          id="product"
+        >
           <div className="flex flex-col w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
             <SplitText
               text="Transform Your Life with Tailored Coaching Solutions."
@@ -211,7 +213,7 @@ function ProductPage() {
       </div>
 
       {/* Testimonials Section with Improved Responsiveness */}
-      <div className="p-4 sm:p-8 mt-8 text-center">
+      <div className="p-4 sm:p-8 mt-8 text-center" id="testimonials">
         <SplitText
           text="Discover What Our Students Feel About Us"
           className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-900 mb-8"

@@ -33,18 +33,17 @@ function TestimonialPage() {
   ];
 
   const sections = [
-    { label: "Why Us", anchor: "#why-us", icon: Trophy },
-    { label: "Courses", anchor: "#courses", icon: Star },
-    { label: "About", anchor: "#about", icon: Users },
+    { label: "Watch Video", anchor: "#video", icon: Trophy },
+    { label: "Testimonials", anchor: "#testimonials", icon: Star },
   ];
 
   return (
-    <div className="min-h-screen container">
+    <div className="min-h-screen overflow-hidden container">
       <Navbar logo={logo} sections={sections} />
 
       {/* Hero Section */}
       <AnimatedContent direction="vertical" distance={100}>
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-yellow-300 to-blue-900 text-center">
+        <div className="min-h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-b from-yellow-300 to-blue-900 text-center">
           <div className="container mx-auto px-4 py-16">
             <div className="max-w-3xl mx-auto">
               <SplitText
@@ -73,7 +72,7 @@ function TestimonialPage() {
       </AnimatedContent>
 
       {/* Testimonials Grid */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 py-16" id="testimonials">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -119,7 +118,10 @@ function TestimonialPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <FadeContent blur={true} duration={1500}>
-                <div className="relative mb-12 rounded-xl overflow-hidden">
+                <div
+                  className="relative mb-12 rounded-xl overflow-hidden"
+                  id="video"
+                >
                   <img
                     src="/api/placeholder/800/400"
                     alt="Training session"

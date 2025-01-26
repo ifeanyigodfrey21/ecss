@@ -11,6 +11,9 @@
   scroll-behavior: smooth;
   color-scheme: white;
 }
+body {
+  overflow-x: hidden;
+}
 
 /* Slide from left */
 @keyframes slideFromLeft {
