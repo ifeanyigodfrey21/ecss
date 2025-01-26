@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/AboutPage/Logo.png";
+import { Link } from "react-router-dom";
 import {
   Mail,
   Facebook,
@@ -67,12 +68,12 @@ function Footer() {
                 <ul className="space-y-3">
                   {links.map((link) => (
                     <li key={link}>
-                      <a
-                        href={`/${link.toLowerCase(title)}`}
+                      <Link
+                        to={`/${link.toLowerCase(title)}`}
                         className="text-gray-400 hover:text-yellow-400 transition-colors"
                       >
                         {link}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
