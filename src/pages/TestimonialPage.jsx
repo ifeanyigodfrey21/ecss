@@ -39,7 +39,7 @@ function TestimonialPage() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen container">
       <Navbar logo={logo} sections={sections} />
 
       {/* Hero Section */}
