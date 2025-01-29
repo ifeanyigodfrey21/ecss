@@ -39,19 +39,21 @@ function TestimonialPage() {
 
   return (
     <div className="min-h-screen overflow-hidden container">
-      <Navbar logo={logo} sections={sections} />
+      <div className="fixed w-full z-50 block">
+        <Navbar logo={logo} sections={sections} />
+      </div>
 
       {/* Hero Section */}
       <AnimatedContent direction="vertical" distance={100}>
-        <div className="min-h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-b from-yellow-300 to-blue-900 text-center">
+        <div className="min-h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-b from-yellow-300 to-blue-900 text-center mb-">
           <div className="container mx-auto px-4 py-16">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-3xl mx-auto ">
               <SplitText
                 text="Hear what Professionals and Organizations have to say about our tailored coaching solutions"
                 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6"
                 delay={100}
               />
-              <p className="text-lg text-blue-900 mb-6">
+              <p className="text-lg text-blue-900 mb-6 mt">
                 The stories shared by both professional individuals and
                 organizations that have gone through E-consult suites solution
                 is worth it and we want to share with you.
@@ -142,7 +144,7 @@ function TestimonialPage() {
                   animationSpeed={3}
                   className="text-3xl font-bold mb-6"
                 >
-                  Why Us?
+                  Why E-Coaching Solutions?
                 </GradientText>
                 <p className="text-lg mb-8 text-gray-200">
                   Our unique blend of online courses, interactive workshops, and

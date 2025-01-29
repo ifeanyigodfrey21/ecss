@@ -19,14 +19,14 @@ const Hero = () => {
 
   return (
     <>
-      <nav className="fixed w-full bg-yellow-50/90 backdrop-blur-md shadow-lg z-50">
+      <nav className="fixed w-full bg-white/90 backdrop-blur-md shadow-lg z-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center">
               <Link
                 to="/"
-                className="text-xl sm:text-2xl font-bold text-yellow-600 hover:text-yellow-700 transition-colors"
+                className="text-xl sm:text-2xl font-bold text-[#2B2B5A] hover:opacity-80 transition-opacity"
               >
                 <img
                   src={logo}
@@ -42,7 +42,7 @@ const Hero = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-sm lg:text-base text-yellow-800 hover:text-yellow-600 transition-colors duration-300 font-medium"
+                  className="text-sm lg:text-base text-[#2B2B5A] hover:opacity-80 transition-opacity duration-300 font-medium"
                 >
                   {item.name}
                 </Link>
@@ -53,7 +53,7 @@ const Hero = () => {
             <div className="hidden md:block">
               <Link
                 to="/signUp"
-                className="px-4 sm:px-6 py-2 text-sm sm:text-base bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition-colors duration-300 shadow-md"
+                className="px-4 sm:px-6 py-2 text-sm sm:text-base bg-[#2B2B5A] text-white rounded-full hover:opacity-90 transition-opacity duration-300 shadow-md"
               >
                 Register now
               </Link>
@@ -63,7 +63,7 @@ const Hero = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-yellow-800 hover:text-yellow-600 focus:outline-none"
+                className="text-[#2B2B5A] hover:opacity-80 focus:outline-none transition-opacity"
                 aria-label="Toggle mobile menu"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -73,20 +73,20 @@ const Hero = () => {
 
           {/* Mobile Navigation Menu */}
           {isMenuOpen && (
-            <div className="md:hidden absolute inset-x-0 top-full bg-yellow-50 shadow-lg">
+            <div className="md:hidden absolute inset-x-0 top-full bg-white shadow-lg">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {navItems.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="block px-3 py-2 text-base font-medium text-yellow-800 hover:bg-yellow-100 hover:text-yellow-600 rounded-md transition-colors duration-300"
+                    className="block px-3 py-2 text-base font-medium text-[#2B2B5A] hover:bg-slate-50 hover:opacity-80 rounded-md transition-all duration-300"
                   >
                     {item.name}
                   </Link>
                 ))}
                 <Link
                   to="/register"
-                  className="block w-full text-center px-4 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition-colors duration-300 shadow-md"
+                  className="block w-full text-center px-4 py-2 bg-[#2B2B5A] text-white rounded-full hover:opacity-90 transition-opacity duration-300 shadow-md"
                 >
                   Register now
                 </Link>
