@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import H1 from "../assets/Hompage/h1.png";
+import H1 from "../assets/Hompage/H12.png";
 import GradientText from "../UI/TextAnimations/GradientText/GradientText";
 import Button from "./Button";
+import logo from "../assets/AboutPage/Logo.png";
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +28,11 @@ const Hero = () => {
                 to="/"
                 className="text-xl sm:text-2xl font-bold text-yellow-600 hover:text-yellow-700 transition-colors"
               >
-                YourLogo
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className="w-10 h-10 sm:w-20 sm:h-12"
+                />
               </Link>
             </div>
 
@@ -47,7 +52,7 @@ const Hero = () => {
             {/* Desktop Register Button */}
             <div className="hidden md:block">
               <Link
-                to="/register"
+                to="/signUp"
                 className="px-4 sm:px-6 py-2 text-sm sm:text-base bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition-colors duration-300 shadow-md"
               >
                 Register now

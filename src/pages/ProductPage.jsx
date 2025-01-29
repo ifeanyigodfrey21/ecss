@@ -35,11 +35,30 @@ function ProductPage() {
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const testimonials = [
+    {
+      name: "Oluwaseun Afolabi",
+      text: "As a business owner in Lagos, I was overwhelmed with scaling my company. Through this coaching program, I learned valuable leadership skills and strategies that helped me grow my team from 5 to 25 employees in just one year.",
+      bgColor: "bg-yellow-200",
+      textColor: "text-blue-900",
+    },
+    {
+      name: "Chidinma Okonkwo",
+      text: "Working in Nigeria's tech sector, I struggled with imposter syndrome. My coach helped me recognize my worth and develop confidence in my abilities. Now I'm leading major projects and mentoring other women in tech.",
+      bgColor: "bg-blue-900",
+      textColor: "text-yellow-200",
+    },
+    {
+      name: "Babajide Adebayo",
+      text: "The transformation in my professional life has been remarkable. This coaching helped me transition from a corporate job to successfully launching my consulting practice in Abuja. The practical guidance was invaluable.",
+      bgColor: "bg-blue-900",
+      textColor: "text-yellow-200",
+    },
+  ];
 
   return (
     <div className="w-full overflow-hidden max-w-screen px-2 sm:px-6 lg:px-2">
       <Navbar logo={logo} sections={sections} />
-
       {/* Hero Section with Improved Responsiveness */}
       <AnimatedContent
         distance={100}
@@ -96,7 +115,6 @@ function ProductPage() {
           </FadeContent>
         </div>
       </AnimatedContent>
-
       {/* Course Sections with Improved Responsiveness */}
       <div className="space-y-8 mt-8">
         {[
@@ -211,16 +229,15 @@ function ProductPage() {
           </AnimatedContent>
         ))}
       </div>
-
       {/* Testimonials Section with Improved Responsiveness */}
       <div className="p-4 sm:p-8 mt-8 text-center" id="testimonials">
         <SplitText
-          text="Discover What Our Students Feel About Us"
+          text="Discover What Our Clients Feel About Us"
           className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-900 mb-8"
           delay={150}
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-          {[1, 2, 3].map((_, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 justify-center">
+          {testimonials.map((testimonial, index) => (
             <FadeContent
               key={index}
               blur={true}
@@ -228,46 +245,35 @@ function ProductPage() {
               className="w-full"
             >
               <div
-                className={`${
-                  index === 0 ? "bg-yellow-200" : "bg-blue-900"
-                } p-6 rounded-lg ${
+                className={`${testimonial.bgColor} p-6 rounded-lg ${
                   index === 0 ? "border border-gray-300" : ""
                 } max-w-[400px] mx-auto`}
               >
                 <div className="flex flex-col items-center mb-4">
                   <img
-                    src={H6}
-                    alt="Profile picture"
+                    src="/api/placeholder/64/64"
+                    alt={`${testimonial.name}'s profile picture`}
                     className="w-16 h-16 rounded-full mb-4"
                   />
                   <h2
-                    className={`text-xl sm:text-2xl font-bold ${
-                      index === 0 ? "text-blue-900" : "text-yellow-200"
-                    }`}
+                    className={`text-xl sm:text-2xl font-bold ${testimonial.textColor}`}
                   >
                     <ShinyText
-                      text="Adesokon Faith"
+                      text={testimonial.name}
                       speed={4}
                       disabled={index !== 0}
                     />
                   </h2>
                 </div>
-                <p
-                  className={`${
-                    index === 0 ? "text-blue-900" : "text-yellow-200"
-                  } text-base text-center`}
-                >
-                  I was struggling with stress and burnout when I joined this
-                  coaching program. My coach taught me how to set boundaries,
-                  prioritize my well-being, and take meaningful steps toward a
-                  healthier lifestyle.
+                <p className={`${testimonial.textColor} text-base text-center`}>
+                  {testimonial.text}
                 </p>
               </div>
             </FadeContent>
           ))}
         </div>
       </div>
-
+      );
       <Footer />
     </div>
   );

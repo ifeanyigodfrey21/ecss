@@ -5,7 +5,7 @@ import StarBorder from "../UI/StarBorder";
 
 function Button({ text, link, width, height }) {
   return (
-    <Magnet magnetStrength={30}>
+    <Magnet magnetStrength={20}>
       <StarBorder
         color="cyan"
         speed="4s"
