@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import logo from "../assets/AboutPage/Logo.png";
 import Navbar from "../component/Navbar";
+import Button from "../component/Button";
 
 // Reactbit UI Components
 import SplitText from "../UI/SplitText";
@@ -36,12 +37,10 @@ function PaymentPage() {
     {
       title: "Peak Performance Mastery Course",
       price: "NGN 50,000.00",
-      image: "/api/placeholder/100/100",
     },
     {
       title: "Peak Productivity Challenge",
       price: "NGN 50,000.00",
-      image: "/api/placeholder/100/100",
     },
   ];
 
@@ -69,11 +68,11 @@ function PaymentPage() {
 
                 <div className="bg-blue-50 p-4 rounded-lg mb-6">
                   <ShinyText
-                    text="081 246 802 88 | 080 644 008 56"
+                    text="09136829288 | 08084469895"
                     className="text-gray-600 mb-2 flex items-center"
                   />
                   <ShinyText
-                    text="harveypendry23@gmail.com"
+                    text="ifeanyigodfey22@gmail.com"
                     className="text-gray-600 flex items-center"
                   />
                 </div>
@@ -89,7 +88,7 @@ function PaymentPage() {
                     <div key={label}>
                       <SplitText
                         text={label}
-                        className="block text-gray-600 mb-2 flex items-center"
+                        className=" text-gray-600 mb-2 flex items-center"
                         delay={50 * index}
                       />
                       <Magnet magnetStrength={30}>
@@ -156,11 +155,11 @@ function PaymentPage() {
                   {orderItems.map((item, index) => (
                     <Magnet key={index} magnetStrength={20}>
                       <div className="flex items-center space-x-4 bg-gray-50 p-4 rounded-lg">
-                        <img
+                        {/* <img
                           src={item.image}
                           alt={`Image of ${item.title}`}
                           className="w-20 h-20 rounded-lg object-cover"
-                        />
+                        /> */}
                         <div className="flex-1">
                           <p className="text-gray-700 font-medium">
                             {item.title}
@@ -187,11 +186,7 @@ function PaymentPage() {
                         placeholder="Enter discount code"
                       />
                     </Magnet>
-                    <StarBorder>
-                      <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                        Apply
-                      </button>
-                    </StarBorder>
+                    <Button text="Apply" />
                   </div>
                 </div>
 
@@ -218,11 +213,7 @@ function PaymentPage() {
                   ))}
                 </div>
 
-                <StarBorder color="yellow" speed="3s">
-                  <button className="mt-8 w-full bg-yellow-400 text-gray-700 py-4 rounded-lg text-lg font-bold hover:bg-yellow-500 transition-colors flex items-center justify-center">
-                    Complete Purchase
-                  </button>
-                </StarBorder>
+                <Button className="" text="Complete Purchase" />
               </div>
             </FadeContent>
           </div>
