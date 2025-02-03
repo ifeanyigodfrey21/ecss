@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "./Button";
 
 const TestimonialCard = ({ image, name, text, rating }) => (
-  <div className="w-full max-w-sm bg-white rounded-lg shadow-md transition-all hover:shadow-lg p-6">
+  <div className="w-full max-w-sm bg-white rounded-lg shadow-md transition-all hover:shadow-lg p-6 slide-right">
     <div className="flex flex-col items-center">
       <img
         src={image}
@@ -51,7 +51,7 @@ function CTA() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 ">
       {/* Hero Section */}
-      <div className="bg-indigo-900 text-white w-full py-12 px-4 md:py-16 slide-left">
+      <div className="bg-indigo-900 text-white w-full py-12 px-4 md:py-16 slide-right ">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center text-center space-y-6">
             <div className="flex items-center gap-2 text-yellow-400 mb-2">
@@ -71,11 +71,11 @@ function CTA() {
       </div>
 
       {/* Testimonials Section */}
-      <div className="max-w-6xl mx-auto px-4 py-16 slide-right">
+      <div className="max-w-6xl mx-auto px-4 py-16 ">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           What Our Clients Say
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />
           ))}
