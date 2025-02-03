@@ -25,7 +25,7 @@ function About() {
         tailored strategies and tools that empower you to achieve peak
         performance, master time management and find clarity in your goals.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8 slide-left">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8 ">
         <div className="flex flex-col items-center slide-left">
           <img
             src={H2}

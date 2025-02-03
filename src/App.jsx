@@ -9,12 +9,12 @@ import SignUpPage from "./pages/SignUpPage";
 import PaymentPage from "./pages/PaymentPage";
 import ProductPage from "./pages/ProductPage";
 import { AuthProvider } from "./context/authContext";
-import SplashCursor from "./UI/TextAnimations/SplashCursor copy";
+// import SplashCursor from "./UI/TextAnimations/SplashCursor copy";
 
 function App() {
   return (
     <div className="w-screen mx-auto body">
-      <SplashCursor />
+      {/* <SplashCursor /> */}
 
       <AuthProvider>
         <BrowserRouter>
