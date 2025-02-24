@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../assets/AboutPage/Logo.png";
 import a2 from "../assets/AboutPage/a2.png";
 import a1 from "../assets/AboutPage/a1.png";
@@ -7,11 +6,8 @@ import Navbar from "../component/Navbar";
 import { Trophy, Star, Users } from "lucide-react";
 
 // Reactbit UI Components
-import SplitText from "../UI/SplitText";
 import AnimatedContent from "../UI/AnimatedContent";
 import FadeContent from "../UI/FadeContent";
-import Magnet from "../UI/Magnet";
-import StarBorder from "../UI/StarBorder";
 import GradientText from "../UI/GradientText";
 import Button from "../component/Button";
 
@@ -27,14 +23,15 @@ function AboutPage() {
       <Navbar logo={logo} sections={sections} />
 
       {/* Hero Section */}
-      <AnimatedContent direction="vertical" distance={100}>
+      <AnimatedContent direction="vertical " distance={100}>
         <main className="container md:justify-between  px-4 py-16 flex flex-col md:flex-row  justify-between">
           <div className="md:w-1/2 space-y-6 pt-6 text-center md:text-left">
-            <SplitText
-              text="Ifeanyi Godfrey Coaching Co."
-              className="text-4xl md:text-5xl font-black text-indigo-900"
-              delay={100}
-            />
+            <h1 className="text-4xl md:text-5xl font-black text-gray-800 pt-4">
+              Welcome to{" "}
+              <span className="text-blue-900">
+                Ifeanyi Godfrey Coaching Co.
+              </span>
+            </h1>
             <p className="text-xl text-gray-700 font-medium leading-relaxed">
               A transformative movement dedicated to empowering individuals to
               unleash their most extraordinary potential and live purposefully.
@@ -101,11 +98,14 @@ function AboutPage() {
               >
                 The Vision
               </h2>
-              <SplitText
+              {/* <SplitText
                 text="Creating Global Transformative Impact"
                 className="text-3xl md:text-4xl font-black text-yellow-300 mb-6"
                 delay={80}
-              />
+              /> */}
+              <h1 className="text-3xl md:text-4xl font-black text-yellow-300 mb-6">
+                Creating Global Transformative Impact
+              </h1>
               <p className="text-lg font-medium leading-relaxed text-gray-200">
                 Pioneering a global coaching revolution that empowers
                 individuals and organizations to break through limitations,
@@ -120,11 +120,14 @@ function AboutPage() {
               >
                 The Mission
               </h2>
-              <SplitText
+              {/* <SplitText
                 text="Amplify Discipline, Clarity, Impact"
                 className="text-3xl md:text-4xl font-black text-yellow-300 mb-6"
                 delay={80}
-              />
+              /> */}
+              <h1 className="text-3xl md:text-4xl font-black text-yellow-300 mb-6">
+                Amplify Discipline, Clarity, Impact
+              </h1>
               <p className="text-lg font-medium leading-relaxed text-gray-200">
                 Empowering ambitious professionals with cutting-edge coaching
                 methodologies, personalized strategies, and transformative tools

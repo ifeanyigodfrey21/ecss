@@ -175,7 +175,7 @@ function PaymentPage() {
                 <div className="mt-8">
                   <SplitText
                     text="Discount Code"
-                    className="block text-gray-600 mb-2 flex items-center"
+                    className="text-gray-600 mb-2 flex items-center"
                     delay={100}
                   />
                   <div className="flex space-x-2">

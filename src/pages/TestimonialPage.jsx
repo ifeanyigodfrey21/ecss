@@ -1,19 +1,9 @@
-import React from "react";
 import Footer from "../component/Footer";
 import logo from "../assets/AboutPage/Logo.png";
 import Navbar from "../component/Navbar";
-import {
-  Menu,
-  X,
-  Star,
-  Users,
-  Trophy,
-  ChevronRight,
-  ShoppingCart,
-} from "lucide-react";
+import { Star, Trophy } from "lucide-react";
 
 // Reactbit UI Components
-import SplitText from "../UI/SplitText";
 import AnimatedContent from "../UI/AnimatedContent";
 import FadeContent from "../UI/FadeContent";
 import Magnet from "../UI/Magnet";
@@ -48,12 +38,16 @@ function TestimonialPage() {
         <div className="min-h-screen w-screen flex flex-col items-center justify-center bg-gradient-to-b from-yellow-300 to-blue-900 text-center mb-">
           <div className="container mx-auto px-4 py-16">
             <div className="max-w-3xl mx-auto ">
-              <SplitText
+              {/* <SplitText
                 text="Hear what Professionals and Organizations have to say about our tailored coaching solutions"
                 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6"
                 delay={100}
-              />
-              <p className="text-lg text-blue-900 mb-6 mt">
+              /> */}
+              <h1 className="text-3xl md:text-5xl font-bold text-blue-900 mb-6 pt-8">
+                Hear what Professionals and Organizations have to say about our
+                tailored coaching solutions
+              </h1>
+              <p className="text-lg text-blue-900 mb-6 ">
                 The stories shared by both professional individuals and
                 organizations that have gone through E-consult suites solution
                 is worth it and we want to share with you.

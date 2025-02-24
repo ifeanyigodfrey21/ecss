@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import Footer from "../component/Footer";
 import AnimatedContent from "../UI/AnimatedContent";
-import SplitText from "../UI/SplitText";
 import Magnet from "../UI/Magnet";
 import StarBorder from "../UI/StarBorder";
 import GradientText from "../UI/GradientText";
@@ -14,27 +13,17 @@ import a2 from "../assets/AboutPage/a1.png";
 import H3 from "../assets/Hompage/h3.png";
 import H4 from "../assets/Hompage/h4.png";
 import H5 from "../assets/p1.png";
-import H6 from "../assets/p2.png";
 
-import {
-  Menu,
-  X,
-  Star,
-  Users,
-  Trophy,
-  ChevronRight,
-  ShoppingCart,
-} from "lucide-react";
+import { Star, Trophy } from "lucide-react";
 import Navbar from "../component/Navbar";
 
 function ProductPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [] = useState(false);
   const sections = [
     { label: "Product", anchor: "#product", icon: Trophy },
     { label: "Testimonials", anchor: "#testimonials", icon: Star },
   ];
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const testimonials = [
     {
       name: "Oluwaseun Afolabi",
@@ -71,11 +60,9 @@ function ProductPage() {
           id="product"
         >
           <div className="flex flex-col w-full md:w-1/2 text-center md:text-left order-2 md:order-1">
-            <SplitText
-              text="Transform Your Life with Tailored Coaching Solutions."
-              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 mb-4 text-center md:text-center"
-              delay={100}
-            />
+            <p className="text-2xl font-bold text-blue-900 mb-4 md:text-4xl text-center pt-4">
+              Transform Your Life with Tailored Coaching Solutions.
+            </p>
             <p className="text-gray-600 mb-6 md:text-2xl text-base sm:text-lg text-center md:text-center">
               The stories shared by both professional individuals and
               organizations that gone through E-consult suites solution is worth
@@ -231,11 +218,9 @@ function ProductPage() {
       </div>
       {/* Testimonials Section with Improved Responsiveness */}
       <div className="p-4 sm:p-8 mt-8 text-center" id="testimonials">
-        <SplitText
-          text="Discover What Our Clients Feel About Us"
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-900 mb-8"
-          delay={150}
-        />
+        <h1 className="text-3xl font-bold text-blue-900 mb-4">
+          What Our Clients Are Saying
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 justify-center">
           {testimonials.map((testimonial, index) => (
             <FadeContent
