@@ -1,22 +1,4 @@
-import React, { useState } from "react";
-import {
-  Menu,
-  X,
-  CreditCard,
-  ShoppingBag,
-  Tag,
-  ChevronRight,
-  User,
-  Mail,
-  Phone,
-  MapPin,
-  Building,
-  Map,
-  Hash,
-  Trophy,
-  Star,
-  Users,
-} from "lucide-react";
+import { ChevronRight, Trophy, Star, Users } from "lucide-react";
 import logo from "../assets/AboutPage/Logo.png";
 import Navbar from "../component/Navbar";
 import Button from "../component/Button";
@@ -26,13 +8,10 @@ import SplitText from "../UI/SplitText";
 import AnimatedContent from "../UI/AnimatedContent";
 import FadeContent from "../UI/FadeContent";
 import Magnet from "../UI/Magnet";
-import StarBorder from "../UI/StarBorder";
 import GradientText from "../UI/GradientText";
 import ShinyText from "../UI/ShinyText";
 
 function PaymentPage() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const orderItems = [
     {
       title: "Peak Performance Mastery Course",
@@ -191,7 +170,7 @@ function PaymentPage() {
                 </div>
 
                 <div className="mt-8 space-y-3 bg-gray-50 p-4 rounded-lg">
-                  {["Items", "Discount", "Total"].map((label, index) => (
+                  {["Items", "Discount", "Total"].map((label) => (
                     <div
                       key={label}
                       className={`flex justify-between text-gray-${
