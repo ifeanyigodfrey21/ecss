@@ -10,6 +10,7 @@ import Magnet from "../UI/Magnet";
 import StarBorder from "../UI/StarBorder";
 import GradientText from "../UI/GradientText";
 import ShinyText from "../UI/ShinyText";
+import { Link } from "react-router-dom";
 
 function TestimonialPage() {
   const testimonials = [
@@ -17,7 +18,7 @@ function TestimonialPage() {
       name: "Godfrey Johnson",
       role: "Project Manager",
       image: "/api/placeholder/100/100",
-      text: "ECSS sessions taught me how to leverage my strengths, clarify my career goals, and boost my confidence.",
+      text: " E-Coaching Solutions sessions taught me how to leverage my strengths, clarify my career goals, and boost my confidence.",
     },
     // ... (rest of testimonials remain the same)
   ];
@@ -26,6 +27,9 @@ function TestimonialPage() {
     { label: "Watch Video", anchor: "#video", icon: Trophy },
     { label: "Testimonials", anchor: "#testimonials", icon: Star },
   ];
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div className="min-h-screen overflow-hidden container">
@@ -57,9 +61,12 @@ function TestimonialPage() {
               </p>
               <Magnet magnetStrength={20}>
                 <StarBorder>
-                  <button className="px-8 py-3 bg-yellow-400 text-blue-900 rounded hover:bg-yellow-500 transition-colors text-lg font-semibold">
+                  <Link
+                    to={"/product"}
+                    className="px-8 py-3 bg-yellow-400 text-blue-900 rounded hover:bg-yellow-500 transition-colors text-lg font-semibold"
+                  >
                     Buy a Course now
-                  </button>
+                  </Link>
                 </StarBorder>
               </Magnet>
             </div>
@@ -148,14 +155,22 @@ function TestimonialPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <StarBorder color="yellow">
-                    <button className="px-6 py-3 bg-yellow-400 text-indigo-900 rounded hover:bg-yellow-500 transition-colors font-bold">
+                    <Link
+                      onClick={handleNavigation}
+                      to={"/product"}
+                      className="px-6 py-3 bg-yellow-400 text-indigo-900 rounded hover:bg-yellow-500 transition-colors font-bold"
+                    >
                       Explore Courses
-                    </button>
+                    </Link>
                   </StarBorder>
                   <StarBorder color="yellow" speed="3s">
-                    <button className="px-6 py-3 border-2 border-yellow-400 text-yellow-400 rounded hover:bg-yellow-400/10 transition-colors font-bold">
+                    <Link
+                      onClick={handleNavigation}
+                      to={"/payment"}
+                      className="px-6 py-3 border-2 border-yellow-400 text-yellow-400 rounded hover:bg-yellow-400/10 transition-colors font-bold"
+                    >
                       Book a Consultation
-                    </button>
+                    </Link>
                   </StarBorder>
                 </div>
               </div>

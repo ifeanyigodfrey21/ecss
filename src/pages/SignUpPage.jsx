@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+/* eslint-disable no-undef */
 import { FaGoogle, FaFacebookF, FaEye, FaEyeSlash } from "react-icons/fa";
 import logo from "../assets/AboutPage/Logo.png";
 import a1 from "../assets/AboutPage/a1.png";
 import { Link, useNavigate } from "react-router-dom";
-import { signInWithGoogle, signUp } from "../Firebase/auth";
+import { signUp } from "../Firebase/auth";
 import { useAuth } from "../context/authContext";
 
 const SignUpPage = () => {
@@ -15,7 +15,7 @@ const SignUpPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSigningIn, setIsSigningIn] = useState(false);
-  const [error, setError] = useState("");
+  const [setError] = useState("");
 
   const onSubmit = async (e) => {
     e.preventDefault();

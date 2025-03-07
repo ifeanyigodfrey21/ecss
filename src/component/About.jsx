@@ -1,13 +1,13 @@
-import React from "react";
 import H2 from "../assets/Hompage/h2.png";
 import H3 from "../assets/Hompage/h4.png";
 import H4 from "../assets/Hompage/h3.png";
 import "animate.css";
-import { Link, useNavigate } from "react-router-dom";
 import BlurText from "../UI/TextAnimations/BluryText";
 import Button from "./Button";
 
 function About() {
+  // Custom handler for navigation with scroll to top
+
   return (
     <div className="flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
       <BlurText
@@ -58,7 +58,11 @@ function About() {
         </div>
       </div>
       <div className="text-center">
-        <Button text="See more" link="/product" />
+        {/* Option 1: Directly modify the Button component's onClick */}
+        <Button text={"See more"} link={"/about"} />
+
+        {/* Option 2: If you prefer to keep using your Button component, you'll need to modify that component */}
+        {/* <Button text="See more" link="/about" onClick={() => window.scrollTo(0, 0)} /> */}
       </div>
     </div>
   );

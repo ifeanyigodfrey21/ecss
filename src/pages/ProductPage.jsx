@@ -16,6 +16,8 @@ import H5 from "../assets/p1.png";
 
 import { Star, Trophy } from "lucide-react";
 import Navbar from "../component/Navbar";
+import { Link } from "react-router-dom";
+import Button from "../component/Button";
 
 function ProductPage() {
   // const [] = useState(false);
@@ -75,7 +77,7 @@ function ProductPage() {
                   speed="4s"
                   className="bg-yellow-400 text-gray-800 font-bold py-2 px-4 rounded hover:bg-yellow-500 transition-colors"
                 >
-                  Register now
+                  <Link to="/signup">Register now</Link>
                 </StarBorder>
               </Magnet>
             </div>
@@ -158,7 +160,7 @@ function ProductPage() {
                     Price: {course.price}
                   </p>
                   <div className="flex justify-center md:justify-start">
-                    <Magnet magnetStrength={40}>
+                    {/* <Magnet magnetStrength={40}>
                       <StarBorder
                         color="yellow"
                         speed="5s"
@@ -166,7 +168,8 @@ function ProductPage() {
                       >
                         Buy now
                       </StarBorder>
-                    </Magnet>
+                    </Magnet> */}
+                    <Button text="Buy now" link="/payment" />
                   </div>
                 </div>
                 <div className="md:w-1/2 flex justify-center">
@@ -200,7 +203,7 @@ function ProductPage() {
                     Price: {course.price}
                   </p>
                   <div className="flex justify-center md:justify-start">
-                    <Magnet magnetStrength={40}>
+                    {/* <Magnet magnetStrength={40}>
                       <StarBorder
                         color="yellow"
                         speed="5s"
@@ -208,7 +211,8 @@ function ProductPage() {
                       >
                         Buy now
                       </StarBorder>
-                    </Magnet>
+                    </Magnet> */}
+                    <Button text="Buy now" link="/payment" />
                   </div>
                 </div>
               </div>

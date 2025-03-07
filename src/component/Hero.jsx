@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import H1 from "../assets/Hompage/H12.png";
@@ -122,8 +122,8 @@ const Hero = () => {
           </GradientText>
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl mx-auto">
-            The handy doodles on, announced by some over people everywhere best
-            five.
+            The Ifeanyi Godfrey co- a movement to empower people everywhere to
+            live their best lives.
           </p>
 
           <Button text="Log in" link="/login" />

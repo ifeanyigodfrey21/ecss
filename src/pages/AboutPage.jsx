@@ -37,7 +37,7 @@ function AboutPage() {
               unleash their most extraordinary potential and live purposefully.
             </p>
 
-            <Button link="/courses" text="Get Started" />
+            <Button link="/signup" text="Get Started" />
           </div>
           <FadeContent blur={true} duration={1500}>
             <div className="mt-8 md:mt-2 md:w-[600px] md:h-[500px] flex md:pl-20 ">

@@ -1,14 +1,6 @@
-import React from "react";
 import logo from "../assets/AboutPage/Logo.png";
 import { Link } from "react-router-dom";
-import {
-  Mail,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Twitter,
-  Send,
-} from "lucide-react";
+import { Mail, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Button from "./Button";
 
 function Footer() {
@@ -69,8 +61,9 @@ function Footer() {
                   {links.map((link) => (
                     <li key={link}>
                       <Link
-                        to={`/${link.toLowerCase(title)}`}
+                        to={`/${link.toLowerCase()}`}
                         className="text-gray-400 hover:text-yellow-400 transition-colors"
+                        onClick={() => window.scrollTo(0, 0)}
                       >
                         {link}
                       </Link>
