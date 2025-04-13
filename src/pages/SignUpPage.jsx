@@ -5,6 +5,7 @@ import a1 from "../assets/AboutPage/a1.png";
 import { Link, useNavigate } from "react-router-dom";
 import { signUp } from "../Firebase/auth";
 import { useAuth } from "../context/authContext";
+import { useState } from "react";
 
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
