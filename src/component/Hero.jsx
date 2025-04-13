@@ -85,7 +85,7 @@ const Hero = () => {
                   </Link>
                 ))}
                 <Link
-                  to="/register"
+                  to="/signUp"
                   className="block w-full text-center px-4 py-2 bg-[#2B2B5A] text-white rounded-full hover:opacity-90 transition-opacity duration-300 shadow-md"
                 >
                   Register now
